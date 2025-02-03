@@ -2,3 +2,4 @@ flask
 gunicorn
 textblob
 google.generativeai
+web3
