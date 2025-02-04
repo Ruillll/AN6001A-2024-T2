@@ -1,0 +1,17 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>股票查询</h1>
+        <form action="/stock_result" method="post">
+            <label for="q">输入股票代码（多个请用逗号分隔，如 AAPL, MSFT, GOOGL）:</label>
+            <input type="text" id="q" name="q" required>
+            <button type="submit">查询</button>
+        </form>
+
+    </div>
+
+</body>

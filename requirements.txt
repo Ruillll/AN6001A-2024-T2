@@ -1,5 +1,7 @@
 flask
 gunicorn
 textblob
+transformers
+pipeline
 google.generativeai
-web3
+yfinance

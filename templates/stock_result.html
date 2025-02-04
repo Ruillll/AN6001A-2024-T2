@@ -1,9 +1,16 @@
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+    <title>Stock Information</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; text-align: center; }
+        h2 { color: #333; }
+        img { max-width: 80%; height: auto; margin-top: 20px; display: block; margin-left: auto; margin-right: auto; }
+        .container { width: 60%; margin: auto; text-align: center; }
+        .back-btn { margin-top: 20px; }
+    </style>
 </head>
-
-
 <body>
     <div class="container">
         {% for result in results %}
@@ -16,8 +23,9 @@
             <p><strong>Website:</strong> <a href="{{ result['Website'] }}" target="_blank">{{ result["Website"] }}</a></p>
         {% endfor %}
 
+        <h2>股价走势图</h2>
         {% for image in images %}
-            <h2>Stock Price Chart - {{ image.stock_code }}</h2>
+            <h3>{{ image.stock_code }} 股价走势图</h3>
             <img src="{{ image.image_path }}" alt="{{ image.stock_code }} Stock Chart">
         {% endfor %}
 
@@ -26,3 +34,4 @@
         </form>
     </div>
 </body>
+</html>
