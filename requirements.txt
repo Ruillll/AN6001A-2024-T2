@@ -1,6 +1,7 @@
 flask
 gunicorn
 textblob
+torch
 transformers
 pipeline
 google.generativeai
