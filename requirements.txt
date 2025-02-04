@@ -5,3 +5,5 @@ transformers
 pipeline
 google.generativeai
 yfinance
+matplotlib.pyplot
+matplotlib.dates
